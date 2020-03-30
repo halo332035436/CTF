@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagerRating.ManagerRateActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <include layout="@layout/toolbar_layout"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_manager_rate" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <com.bullb.ctf.Widget.MenuView
+        android:id="@+id/menu_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.bullb.ctf.Widget.BlurCircleView
+        android:id="@+id/blur_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

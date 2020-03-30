@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_type_ain_other"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bullb.ctf.TargetManagement.TypeAInOtherActivity"
+    tools:showIn="@layout/activity_type_ain_other">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/big_pink_bg"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <include layout="@layout/personal_info_banner_layout"/>
+
+        <com.bullb.ctf.Widget.CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <View
+            android:id="@+id/upper_tab_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/line_grey"
+            android:visibility="gone"/>
+
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/period_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="2dp"
+            app:tl_indicator_color="@color/colorPrimary"
+            app:tl_indicator_width="20dp"
+            app:tl_textSelectColor="@color/colorPrimary"
+            app:tl_textsize="15sp"
+            app:tl_textUnselectColor="@color/disable_grey"
+            android:visibility="gone"
+            >
+
+
+        </com.flyco.tablayout.CommonTabLayout>
+
+        <View
+            android:id="@+id/lower_tab_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/line_grey"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/rank_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/rank"
+                android:textAppearance="@style/CircleDescriptionTextStyle"
+                android:gravity="center"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:text="test"
+                android:gravity="center"
+                android:textAppearance="@style/CircleDataTextStyle"
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/type_a_in_other_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="16dp"
+                android:layout_marginBottom="4dp"/>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom"
+                app:ci_drawable="@drawable/circle_red"
+                app:ci_drawable_unselected="@drawable/circle_hollow_red"
+                app:ci_animator="@null"/>
+
+        </FrameLayout>
+
+
+        <com.bullb.ctf.Widget.BottomView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_view_height"/>
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/main_red" />
+</RelativeLayout>

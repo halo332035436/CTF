@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bullb.ctf.TargetManagement.TargetManagementFragment">
+
+  <com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView
+      android:id="@+id/target_recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+  </com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView>
+
+
+
+  <com.wang.avi.AVLoadingIndicatorView
+      android:id="@+id/progress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:visibility="gone"
+      app:indicatorName="BallPulseIndicator"
+      app:indicatorColor="@color/main_red" />
+
+
+</FrameLayout>

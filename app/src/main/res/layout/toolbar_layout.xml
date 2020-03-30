@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/transparent"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    android:contentInsetLeft="0dp"
+    android:contentInsetStart="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    android:contentInsetRight="0dp"
+    android:contentInsetEnd="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetEnd="0dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="left">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:src="@drawable/back_btn"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="?attr/actionBarSize"
+        android:ellipsize="marquee"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:fontFamily="sans-serif"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="right">
+
+        <RelativeLayout
+            android:id="@+id/notification_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:src="@drawable/notification"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:transitionName="@string/notification"/>
+
+        <com.bullb.ctf.Widget.NotificationIndicator
+            android:id="@+id/red_dot"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/notification_red_circle_bg"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/done_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:src="@drawable/done"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:transitionName="@string/notification"
+            android:visibility="gone"/>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layer_layout"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="right">
+
+        <ImageView
+            android:id="@+id/layer_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:src="@drawable/layer_btn"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>
+

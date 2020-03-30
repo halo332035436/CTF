@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="4dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@color/white_transparent_80"
+        android:id="@+id/relativeLayout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/rank_position"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/ranking_rank_text_size"/>
+
+        <com.joooonho.SelectableRoundedImageView
+            android:id="@+id/photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:scaleType="centerCrop"
+            app:sriv_oval="true"/>
+        
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/user_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_dark_grey"
+                android:textSize="16sp"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/target_text"
+                android:textColor="@color/text_dark_grey"
+                android:textSize="16sp"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id="@+id/user_position_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="100dp"
+                android:textColor="@color/text_mid_grey"
+                android:layout_alignLeft="@id/title_text"
+                android:layout_below="@id/user_name_text"
+                android:textSize="14sp"
+                android:maxLines="1"/>
+
+
+
+            <TextView
+                android:id="@+id/target_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_alignBaseline="@+id/user_name_text"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:maxWidth="100dp"
+                android:textColor="@color/text_dark_grey"
+                android:textSize="16sp"
+                android:maxLines="1"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/progress_bar_height"
+                    android:minHeight="@dimen/progress_bar_height"
+                    android:maxHeight="@dimen/progress_bar_height"
+                    android:layout_below="@+id/target_text"
+                    android:layout_marginTop="22dp">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/progress_bar_height"
+                        android:minHeight="@dimen/progress_bar_height"
+                        android:maxHeight="@dimen/progress_bar_height"/>
+
+                    <TextView
+                        android:id="@+id/target_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:textColor="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:textSize="9sp"/>
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/next_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/right"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

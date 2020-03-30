@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SelfManagement.SelfManagementActivity"
+    tools:showIn="@layout/activity_self_management">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/big_pink_bg"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <FrameLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_mid_grey"
+            >
+
+            <ProgressBar
+                android:id="@+id/banner_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:visibility="invisible"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/banner_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/circle_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|center_horizontal"
+                />
+
+
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingRight="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="136dp"
+                        android:textColor="@color/text_dark_grey"
+                        android:textSize="20sp"/>
+
+
+                    <TextView
+                        android:id="@+id/user_position_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="136dp"
+                        android:textColor="@color/text_dark_grey"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:paddingRight="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="136dp"
+                        android:src="@drawable/pin"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="top"/>
+
+                    <TextView
+                        android:id="@+id/user_place_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="@color/text_dark_grey"
+                        android:textSize="14sp"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/dashboard_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:indicatorName="BallPulseIndicator"
+                app:indicatorColor="@color/main_red" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_alignParentBottom="true"
+                app:ci_drawable="@drawable/circle_red"
+                app:ci_drawable_unselected="@drawable/circle_hollow_red"
+                app:ci_animator="@null"/>
+
+
+        </RelativeLayout>
+
+
+        <com.bullb.ctf.Widget.BottomView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+        </com.bullb.ctf.Widget.BottomView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/profile_image_layout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp">
+
+        <com.joooonho.SelectableRoundedImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_grey"
+            app:sriv_oval="true" />
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/main_red</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">@color/main_red</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white_transparent">#99FFFFFF</color>
+    <color name="white_transparent_80">#AAFFFFFF</color>
+    <color name="white_grey_transparent">#80DDDDDD</color>
+    <color name="dark_white_transparent">#40FFFFFF</color>
+    <color name="light_white_transparent">#BBFFFFFF</color>
+    <!--<color name="white_grey_transparent2">#FAF6F6F6</color>-->
+
+
+    //white
+    <color name="white">#FFFFFF</color>
+
+    //red
+    <color name="main_red">#99022f</color>
+
+    //text
+    <color name="text_white">@color/white</color>
+    <color name="text_grey">#AAAAAA</color>
+    <color name="text_mid_grey">#777777</color>
+    <color name="disable_grey">#999999</color>
+    <color name="text_dark_grey">#333333</color>
+    <color name="text_brown">#4a0413</color>
+    <color name="text_dark_red">@color/colorPrimary</color>
+    <color name="accent_blue">#00bcd4</color>
+
+
+
+    //grey
+    <color name="light_grey">#e4e6e6</color>
+    <color name="black">#000000</color>
+    <color name="line_grey">#BBBBBB</color>
+
+
+
+    <color name="tab_pink">#f2e8eb</color>
+    //orange
+    <color name="orange">#ff6600</color>
+    <color name="test_red">#D70051</color>
+    <color name="test_mid">#ED0010</color>
+
+    <color name="percent_20">#E4E6E6</color>
+    <color name="percent_40">#F0B60A</color>
+    <color name="percent_60">@color/orange</color>
+    <color name="percent_80">#AE4D61</color>
+    <color name="percent_100">#BB2546</color>
+    <color name="percent_101">#99022F</color>
+    <color name="pink">#E3B3C7</color>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_my_bonus"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bullb.ctf.MyBonus.MyBonusActivity"
+    tools:showIn="@layout/activity_my_bonus">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/big_pink_bg"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.bullb.ctf.Widget.CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/my_bonus_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                app:ci_drawable="@drawable/circle_red"
+                app:ci_drawable_unselected="@drawable/circle_hollow_red"
+                app:ci_animator="@null"/>
+            
+            <!--<TextView-->
+                <!--android:id="@+id/time_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="32dp"-->
+                <!--android:text="test"-->
+                <!--android:gravity="center"-->
+                <!--android:textSize="12sp"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--/>-->
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/smart_talent_info_note"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="6dp"/>
+
+
+        <com.bullb.ctf.Widget.BottomView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_view_height"/>
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/main_red" />
+
+
+</RelativeLayout>

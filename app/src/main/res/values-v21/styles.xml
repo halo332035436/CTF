@@ -1,0 +1,76 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/text_brown</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorAccent">@color/text_dark_red</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+
+    </style>
+
+
+    <style name="AppTheme.NoActionBar.Red" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/text_brown</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar.Red.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/text_brown</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorAccent">@color/text_dark_red</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+
+    </style>
+
+
+    <style name="AppTheme.NoActionBar.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+
+
+    <style name="CircleDataTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/text_dark_red</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CircleDescriptionTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/text_brown</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

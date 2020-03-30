@@ -1,0 +1,257 @@
+//buildscript {
+//    repositories {
+//        maven { url 'https://maven.fabric.io/public' }
+//        jcenter() { url "https://maven.aliyun.com/repository/jcenter" }
+//        maven { url "https://maven.aliyun.com/repository/google" }
+//        mavenCentral()
+//    }
+//
+//    dependencies {
+//        classpath 'io.fabric.tools:gradle:1.23.0'
+//    }
+//}
+apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    defaultConfig {
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+        applicationId "com.bullb.ctf"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 140
+        versionName "1.9.11"
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+//        manifestPlaceholders = [
+//                JPUSH_PKGNAME : "com.bullb.ctf",
+//                JPUSH_APPKEY : "ad30c61e4ae1dd13094bc962", //JPush 上注册的包名对应的 Appkey.
+//                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//        ]
+    }
+
+
+    signingConfigs {
+        bullb {
+            try {
+                storeFile file('CTF.keystore')
+                keyAlias 'CTF'
+                storePassword KEYSTORE_PASSWORD
+                keyPassword KEY_PASSWORD
+            }
+            catch (Exception) {
+//                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            versionNameSuffix "_debug"
+            signingConfig signingConfigs.bullb
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            versionNameSuffix "_release"
+            signingConfig signingConfigs.bullb
+        }
+    }
+
+    flavorDimensions "server_type", "release_type"
+
+
+    productFlavors {
+        HK {
+            applicationIdSuffix = ".hk"
+            versionNameSuffix = "HK"
+            dimension "server_type"
+        }
+        CN {
+            versionNameSuffix = "CN"
+            dimension "server_type"
+        }
+
+        CNProduction {
+            versionName = android.defaultConfig.versionName + " production"
+//            buildConfigField "String", "SERVER_URL", '"http://smart-talent-api.ctf.com.cn/"'
+//            buildConfigField "String", "SERVER_URL", '"http://ctf-api-02.cloud01.iclass.hk/"'
+            buildConfigField "String", "SERVER_URL", '"http://47.107.50.2/"'
+            buildConfigField "String", "DOWNLOAD_URL", '"http://app.ctfmall.com/smarttalent/default.html"'
+            buildConfigField "String", "PUSH_NOTIFICATION_API_KEY", '"cnWVyWIXZhRsUERQbBEVi1fI"'
+            buildConfigField "String", "GAIA_CHECK_URL", '"https://h5.gaiaworkforce.com/"'
+            buildConfigField "String", "PERFORM_ASSESS_URL", '"https://performance.ctf.com.cn/#/"'
+            buildConfigField "String", "SERVICE_EVA_URL", '"https://performance.ctf.com.cn/serviceEvaluation/"'
+            buildConfigField "String", "CUSTOMER_SERVICE_URL", '"http://recruit-uat.ctf.com.cn/qiyu"'
+            dimension "release_type"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: "com.bullb.ctf",
+                    JPUSH_APPKEY : "d58368fd8014b53fcf4ad00d", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+            ]
+        }
+        HKProduction {
+            applicationIdSuffix = ".prod"
+            versionName = android.defaultConfig.versionName + " hk_production"
+            buildConfigField "String", "SERVER_URL_HK", '"http://ctf-base-api-talent-hk.iclass.hk/"'
+            buildConfigField "String", "SERVER_URL_CN", '"http://smart-talent-api.ctf.com.cn/"'
+            buildConfigField "String", "SERVER_URL_HK_STAGE", '"http://stage3.cloud01.iclass.hk/"'
+            buildConfigField "String", "SERVER_URL_CN_STAGE", '"http://smart-talent-api-test.ctf.com.cn/"'
+            buildConfigField "String", "DOWNLOAD_URL", '"http://app.ctfmall.com/smarttalent/default.html"'
+            buildConfigField "String", "PUSH_NOTIFICATION_API_KEY", '"cnWVyWIXZhRsUERQbBEVi1fI"'
+            buildConfigField "String", "GAIA_CHECK_URL", '"https://h5.gaiaworkforce.com/"'
+            buildConfigField "String", "PERFORM_ASSESS_URL", '"https://performance-uat.ctf.com.cn/#/"'
+            buildConfigField "String", "SERVICE_EVA_URL", '"https://performance.ctf.com.cn/serviceEvaluation/"'
+            buildConfigField "String", "CUSTOMER_SERVICE_URL", '"http://recruit-uat.ctf.com.cn/qiyu"'
+            dimension "release_type"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: "com.bullb.ctf.hk.prod",
+                    JPUSH_APPKEY : "66f1eff0e03794e95fa6c9b7", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+            ]
+        }
+
+        HKStaging {
+            applicationIdSuffix = ".stage"
+            versionName = android.defaultConfig.versionName + " staging"
+//            buildConfigField "String", "SERVER_URL_HK", '"http://ctf-api-02.cloud01.iclass.hk/"'
+//            buildConfigField "String", "SERVER_URL_HK", '"http://ctf-base-api-talent-hk.iclass.hk/"'
+            buildConfigField "String", "SERVER_URL_HK", '"http://stage3.cloud01.iclass.hk/"'
+            buildConfigField "String", "SERVER_URL_CN", '"http://smart-talent-api-test.ctf.com.cn/"'
+            buildConfigField "String", "DOWNLOAD_URL", '"http://app.ctfmall.com/smarttalent/default.html"'
+            buildConfigField "String", "PUSH_NOTIFICATION_API_KEY", '"cnWVyWIXZhRsUERQbBEVi1fI"'
+            buildConfigField "String", "GAIA_CHECK_URL", '"https://h5test.gaiaworkforce.com/"'
+            buildConfigField "String", "PERFORM_ASSESS_URL", '"https://performance-uat.ctf.com.cn"'
+            buildConfigField "String", "SERVICE_EVA_URL", '"https://performance-uat.ctf.com.cn/serviceEvaluation/"'
+            buildConfigField "String", "CUSTOMER_SERVICE_URL", '"http://recruit-uat.ctf.com.cn/qiyu"'
+            dimension "release_type"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: "com.bullb.ctf.hk.stage",
+                    JPUSH_APPKEY : "66f1eff0e03794e95fa6c9b7", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+            ]
+        }
+        CNStaging {
+            applicationIdSuffix = ".stage"
+            versionName = android
+                    .defaultConfig.versionName + " cnstaging"
+            buildConfigField "String", "SERVER_URL", '"http://smart-talent-api-test.ctf.com.cn/"'
+//            buildConfigField "String", "SERVER_URL", '"http://smart-talent-api.ctf.com.cn/"'
+//            buildConfigField "String", "SERVER_URL", '"http://ctf-api-02.cloud01.iclass.hk/"'
+            buildConfigField "String", "DOWNLOAD_URL", '"http://app.ctfmall.com/smarttalent/default.html"'
+            buildConfigField "String", "PUSH_NOTIFICATION_API_KEY", '"cnWVyWIXZhRsUERQbBEVi1fI"'
+            buildConfigField "String", "GAIA_CHECK_URL", '"https://h5.gaiaworkforce.com/"'
+            buildConfigField "String", "PERFORM_ASSESS_URL", '"https://performance-uat.ctf.com.cn"'
+            buildConfigField "String", "SERVICE_EVA_URL", '"https://performance-uat.ctf.com.cn/serviceEvaluation/"'
+            buildConfigField "String", "CUSTOMER_SERVICE_URL", '"http://recruit-uat.ctf.com.cn/qiyu"'
+            dimension "release_type"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: "com.bullb.ctf.stage",
+                    JPUSH_APPKEY : "ce1971a4a643e3758bc9c315", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+            ]
+        }
+    }
+
+
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+        // To check for a certain build type, use variant.buildType.name == "<buildType>"
+        if (name.contains("CN") && name.contains("HK")) {
+            setIgnore(true)
+        }
+        // Gradle ignores any variants that satisfy the conditions above.
+
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            def project = "ctf"
+            def SEP = "-"
+            def flavor = variant.name
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def version = variant.versionCode
+            def date = new Date();
+            def formattedDate = date.format('yyyyMMdd')
+
+//            def newApkName = project + SEP + flavor + SEP + buildType + SEP + formattedDate + ".apk"
+            def newApkName = project + SEP + flavor + SEP + version + ".apk"
+
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace("app",
+                        newApkName)
+                outputFileName = fileName
+
+            }
+
+        }
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+        transitive = true
+    }
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.github.mmin18:realtimeblurview:1.1.0'
+    implementation 'com.afollestad.material-dialogs:core:0.8.6.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.joooonho:selectableroundedimageview:1.0.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'me.relex:circleindicator:1.2.1@aar'
+    implementation 'com.karumi:dexter:2.2.2'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    implementation 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    implementation 'id.zelory:compressor:1.0.2'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'com.liulishuo.filedownloader:library:1.5.3'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'cn.jiguang.sdk:jpush:3.1.6'  // 此处以JPush 3.1.6 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.5'  // 此处以JCore 1.2.5 版本为例。
+    testImplementation 'junit:junit:4.12'
+    implementation 'me.leolin:ShortcutBadger:1.1.19@aar'
+    implementation(name: 'beacons', ext: 'aar')
+
+}

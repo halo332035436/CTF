@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/white_transparent"
+    android:id="@+id/menu_layout"
+    >
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:realtimeBlurRadius="20dp" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/menu_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"
+        android:clipToPadding="true"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:overScrollMode="never"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/dismiss_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/dismiss_btn"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

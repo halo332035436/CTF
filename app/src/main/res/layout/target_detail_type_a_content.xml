@@ -1,0 +1,89 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bullb.ctf.PerformanceEnquiry.CircleWithTypeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.bullb.ctf.Widget.CircleView
+            android:id="@+id/circle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="test"
+            android:textSize="12sp"
+            android:layout_toLeftOf="@+id/circle_view"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/CircleDescriptionTextStyle"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/breakdown_target_complete"
+        android:textSize="16sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:minHeight="@dimen/progress_bar_height"
+        android:maxHeight="@dimen/progress_bar_height"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/adjusted_target_complete"
+        android:textSize="16sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:minHeight="@dimen/progress_bar_height"
+        android:maxHeight="@dimen/progress_bar_height"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

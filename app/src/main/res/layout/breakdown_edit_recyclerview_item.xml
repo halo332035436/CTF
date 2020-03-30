@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@color/white_transparent_80"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/type_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/text_dark_grey"/>
+
+        <TextView
+            android:text="@string/sales_target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_toRightOf="@+id/type_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/type_text"
+            android:layout_marginRight="8dp"
+            android:gravity="right"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/compare_text"
+            android:layout_below="@+id/type_text"
+            android:layout_alignLeft="@+id/type_text"
+            android:layout_alignStart="@+id/type_text"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sales_target_text"
+            android:layout_toRightOf="@+id/compare_text"
+            android:layout_alignTop="@+id/compare_text"
+            android:gravity="right"
+            android:textSize="20sp"
+            android:textColor="@color/text_dark_grey"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:background="@drawable/target_edittext_bg"
+            android:paddingRight="10dp"
+            android:translationZ="5dp"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:lines="1"
+            />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_below="@+id/sales_target_text"
+            android:minHeight="10dp"
+            android:maxHeight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:max="100"
+            android:splitTrack="false"
+            />
+
+
+
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/seek_bar_thumb_size_with_padding"-->
+            <!--android:layout_below="@+id/sales_target_text"-->
+            <!--android:layout_marginTop="8dp">-->
+
+
+            <!--<View-->
+                <!--android:id="@+id/mark"-->
+                <!--android:layout_width="2dp"-->
+                <!--android:layout_height="8dp"-->
+                <!--android:background="@color/text_dark_grey"-->
+                <!--android:layout_marginLeft="100dp"/>-->
+
+            <!--<SeekBar-->
+                <!--android:id="@+id/seek_bar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="26dp"-->
+                <!--android:layout_below="@+id/target_text"-->
+                <!--android:minHeight="10dp"-->
+                <!--android:maxHeight="10dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginBottom="12dp"-->
+                <!--android:paddingStart="24dp"-->
+                <!--android:paddingEnd="24dp"-->
+                <!--android:max="100"-->
+                <!--android:splitTrack="false"-->
+                <!--/>-->
+
+
+
+
+        <!--</RelativeLayout>-->
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

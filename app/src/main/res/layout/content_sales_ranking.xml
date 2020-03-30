@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_sales_ranking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bullb.ctf.SalesRanking.SalesRankingActivity"
+    tools:showIn="@layout/activity_sales_ranking">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/big_pink_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/filter_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/filter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+            <ImageView
+                android:id="@+id/ranking_type_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/filter_btn"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/valuesort_btn" />
+
+
+            <ImageView
+                android:id="@+id/pin"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/pin"
+                android:layout_marginBottom="4dp"
+                android:layout_alignBottom="@+id/location_text" />
+
+
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@id/ranking_type_btn"
+                android:layout_toRightOf="@+id/pin"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="6dp"
+                android:maxLines="1"
+                android:text="test"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/rank_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/CircleDescriptionTextStyle"
+            android:textSize="16sp"
+            android:maxLines="1"/>
+
+        <View
+            android:id="@+id/upper_tab_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/line_grey"/>
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/period_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="2dp"
+            app:tl_indicator_width="20dp"
+            app:tl_indicator_color="@color/colorPrimary"
+            app:tl_textSelectColor="@color/colorPrimary"
+            app:tl_textsize="15sp"
+            app:tl_textUnselectColor="@color/disable_grey"
+            app:tl_tab_space_equal="true"
+            app:tl_indicator_width_equal_title="true"/>
+
+        <View
+            android:id="@+id/lower_tab_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/line_grey"/>
+
+        <TextView
+            android:id="@+id/is_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/empty_list"
+            android:textColor="@color/text_dark_grey"
+            android:visibility="gone"
+            android:textSize="20sp"/>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"/>
+
+        <com.bullb.ctf.Widget.BottomView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_view_height"/>
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/main_red" />
+
+</RelativeLayout>

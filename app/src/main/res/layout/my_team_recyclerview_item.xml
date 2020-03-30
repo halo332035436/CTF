@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="4dp">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/bottom_wrapper"
+            android:layout_width="90dp"
+            android:weightSum="1"
+            android:layout_gravity="right"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_transparent_80">
+
+                <ImageView
+                    android:id="@+id/edit_btn"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/sales_mark"
+                    android:layout_centerInParent="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/upper_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white_transparent_80"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="4dp"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon -->
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="centerCrop"
+                    app:sriv_oval="true"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_weight="1">
+
+                    <!-- User Name -->
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_dark_grey"
+                        android:textSize="18sp"
+                        android:maxLines="1"/>
+
+                    <!-- User Position -->
+                    <TextView
+                        android:id="@+id/tv_user_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="100dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_mid_grey"
+                        android:layout_toRightOf="@+id/tv_user_name"
+                        android:layout_alignBaseline="@+id/tv_user_name"
+                        android:textSize="12sp"
+                        android:maxLines="1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@+id/tv_user_position">
+
+                        <!-- User ID -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="100dp"
+                            android:textColor="@color/text_mid_grey"
+                            android:text="@string/user_id"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                        <TextView
+                            android:id="@+id/tv_user_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:maxWidth="100dp"
+                            android:textColor="@color/text_dark_grey"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:background="@color/text_mid_grey"/>
+
+                        <!-- User Department -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:maxWidth="100dp"
+                            android:textColor="@color/text_mid_grey"
+                            android:text="@string/department"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                        <TextView
+                            android:id="@+id/tv_user_department"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:maxWidth="100dp"
+                            android:textColor="@color/text_dark_grey"
+                            android:textSize="12sp"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!-- Score -->
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/main_red"
+                    android:textSize="24dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</RelativeLayout>

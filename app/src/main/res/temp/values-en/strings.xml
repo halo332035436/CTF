@@ -1,0 +1,322 @@
+<resources>
+    <string name="app_name">Smart Talent</string>
+    <string name="choose">Choose</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="notification">Notification</string>
+    <string name="retry">retry</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+
+
+    //Login Page
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="language_c">Language:</string>
+    <string name="choose_language">Choose Language</string>
+
+
+    //Landing Page
+    <string name="action_notification">Notification</string>
+    <string name="action_settings">Seetting</string>
+
+    <string name="self_management">Self Management</string>
+    <string name="flow_platform">Flow Platform</string>
+    <string name="assessment_management">assessment Management</string>
+    <string name="salary_enquiry">Salary Enquiry</string>
+    <string name="social_security_fund">Social Security Fund</string>
+    <string name="performance_assessment">Performance Assessment</string>
+    <string name="hr_online">HR Online</string>
+    <string name="setting">Setting</string>
+
+
+    //DashBoard
+    <string name="distributed_target">Distributed Target</string>
+    <string name="target_adjust">Target Adjustment</string>
+    <string name="target_complete">Target Complete</string>
+    <string name="adjusted_complete_rate">Adjusted Target Rate</string>
+    <string name="monthly_sales_performance">Monthly Sales Performance</string>
+    <string name="year_on_year">Year-on-year</string>
+    <string name="A_cat">A</string>
+    <string name="F_cat">F</string>
+    <string name="E_cat">E</string>
+    <string name="M_cat">M</string>
+    <string name="total_bonus">Total Bonus</string>
+    <string name="target_prize">Target Prize</string>
+    <string name="commission_prize">Commission Prize</string>
+    <string name="profit_prize">Profit Prize</string>
+    <string name="point_remaining">Point Remaining</string>
+
+
+    //Target Management
+    <string name="my_target">My Target</string>
+    <string name="team_target">Team Target</string>
+    <string name="rank">Rank</string>
+    <string name="circle_distributed_target">circle_distributed_target</string>
+    <string name="circle_adjusted_complete_rate">circle_adjusted_complete_rate</string>
+    <string name="circle_predicted_commission">circle_predicted_commission</string>
+    <string name="target_complete_rate">Target Complete Rate</string>
+    <string name="sales_target">Sales Target</string>
+    <string name="target_type_all">All type</string>
+    <string name="target_type_A">Type A</string>
+    <string name="target_type_F">Type F</string>
+    <string name="target_type_E">Type E</string>
+    <string name="target_type_M">Type M</string>
+    <string name="breakdown_target">Breakdown Target</string>
+    <string name="breakdown_target_complete_rate">Breakdown Target Complete Rate</string>
+    <string name="profit_target">Profit Target</string>
+    <string name="profit_complete_rate">Profit Complete Rate</string>
+    <string name="target_distributed_target">Distributed Target</string>
+
+    //Target Detail
+    <string name="circle_detail_distributed_target">circle_detail_distributed_target</string>
+    <string name="circle_detail_adjust_target">@string/target_adjust</string>
+    <string name="circle_detail_target_complete">circle_detail_target_complete</string>
+    <string name="circle_detail_adjuested_rate">@string/circle_adjusted_complete_rate</string>
+
+    //BreakDown
+    <string name="breakdown_title">Breakdown</string>
+    <string name="branches_sales_target">Branches Sales Target</string>
+    <string name="breakdown_sales_target">Breakdown Sales Target</string>
+    <string name="last_year_sales">Last year sales</string>
+    <string name="lower_limit">Lower Limit</string>
+    <string name="total_sales_target">Total Sales Target</string>
+
+
+    //Predict Bonus Activity
+    <string name="predict_formula_des">predict_formula_des</string>
+    <string name="predict_distributed_target">predict_distributed_target</string>
+    <string name="predict_adjusted_target">predict_adjusted_target</string>
+
+
+    //Performance Enquiry
+    <string name="my_performance">My Performance</string>
+    <string name="team_performance">Team Performance</string>
+    <string name="check_sales_details"><u>Check Sales Performance Detail</u></string>
+
+
+    //Menu
+    <string name="target_management">Target Management</string>
+    <string name="performance_enquiry">Performance Enquiry</string>
+    <string name="personal_info">Personal Information</string>
+    <string name="my_team">My Team</string>
+    <string name="sales_ranking">Sales Ranking</string>
+    <string name="my_bonus">My Bonus</string>
+    <string name="sales_mark">Sales Mark</string>
+    <string name="sales_activity">Sales Activity</string>
+    <string name="manager_judgement">Manager Judgement</string>
+    <string name="back_menu">Menu</string>
+
+    //Setting
+    <string name="change_password">Change Password</string>
+    <string name="language">Language</string>
+    <string name="logout">Logout</string>
+    <string name="current_pw">Current Password</string>
+    <string name="new_pw">New Password</string>
+    <string name="confirm_pw">Confirm Password</string>
+
+
+    //Profile
+    <string name="change_tele">Change Tele</string>
+    <string name="change_address">Change Address</string>
+    <string name="change_email">Change Email</string>
+
+
+    //Month
+    <string-array name="month_arr">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <string-array name="quarter_arr">
+        <item>Q1</item>
+        <item>Q2</item>
+        <item>Q3</item>
+        <item>Q4</item>
+    </string-array>
+
+    //period
+    <string name="monthly">monthly</string>
+    <string name="quarterly">quarterly</string>
+    <string name="yearly">yearly</string>
+
+
+    //Error Message
+    <string name="error.network">Network Connection Error</string>
+    <string name="error.server">Server Error</string>
+    <string name="error.empty.staff.id">Please fill in your staff id.</string>
+    <string name="error.empty.password">Please fill in your password.</string>
+    <string name="error.invalid.new_password">Your password must at least contain 6 characters.</string>
+    <string name="error.invalid.confirm_password">Your confirm password is incorrect</string>
+
+
+    //Alert Message
+    <string name="alert.logout">Do you want to logout?</string>
+    <string name="alert.permission.change_profile">Permission is required to Change Profile Picture.</string>
+    <string name="alert.permission.setting">Permission Setting</string>
+    <string name="alert.title.please_select">Please Select</string>
+    <string-array name="alert_choose_photo_arr">
+        <item>Gallery</item>
+        <item>Camera</item>
+    </string-array>
+
+
+    <string name="team_colaboration">Team Colaboration</string>
+    <string name="communication_technique">Communication Technique</string>
+    <string name="cs_performance">Custom Service Performance</string>
+    <string name="department">Department</string>
+    <string name="employee_rate">Employee rate</string>
+    <string name="last_year">Last year</string>
+    <string name="user_id">User Id</string>
+    <string name="total_sales_amount">Total Sales</string>
+    <string name="sales_last_year">Last Year</string>
+    <string name="sales_deatil">Sales Detail</string>
+    <string name="all">All</string>
+    <string name="profit_amount">Profit Amount</string>
+    <string name="compare_growth">Growth</string>
+    <string name="point_detail">Detail</string>
+    <string name="small_count">Point</string>
+    <string name="push_notification">Push Notification</string>
+    <string name="sales_performance">Performance Requirement</string>
+    <string name="ability_capability_point">Ability</string>
+    <string name="co_act_point">Culture point</string>
+    <string name="district">District</string>
+    <string name="a_type">A Type</string>
+    <string name="f_type">F type</string>
+    <string name="e_type">E type</string>
+    <string name="m_type">M type</string>
+    <string name="input_rate_msg">Please input rating</string>
+    <string name="type_sales_amount">Type Sales Amount</string>
+    <string name="ranking_area">Ranking Area</string>
+    <string name="branches">Branches</string>
+    <string name="small_district">Small district</string>
+    <string name="district_2">District</string>
+    <string name="large_district">Large District</string>
+    <string name="staff">Staff</string>
+    <string name="rank_smallest_unit">Smallest Ranking Unit</string>
+    <string name="sales_amount">Sales Amount</string>
+    <string name="breakdown_target_complete">Breakdown Target Complete</string>
+    <string name="adjusted_target_complete">Adjusted Target Complete</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="dialog.title.change_phone">Change Phone Number</string>
+    <string name="dialog.title.change_email">Change Email</string>
+    <string name="dialog.title.change_address">Change Address</string>
+    <string name="dialog.message.change_phone">Please input your new phone number</string>
+    <string name="dialog.message.change_email">Please input your new email address</string>
+    <string name="dialog.message.change_address">Please input your new address</string>
+    <string name="sales_target_this_month">Sales target in this month</string>
+    <string name="forgot_password"><u>Forgot Password</u></string>
+    <string name="department_name">Department Name</string>
+    <string name="adjust_target">Adjust Target</string>
+    <string name="break_down_target_this_month">Break Down Target This Month</string>
+    <string name="sales_record">Sales Record</string>
+    <string name="activity_summary">Activity Summary</string>
+    <string name="refund_noti">Refund Notification</string>
+    <string name="nid_input_hint">ID number (Last 4 digits)</string>
+    <string name="birth_input_hint">Date of Birth(MMDD)</string>
+    <string name="tele_input_hint">Phone Number</string>
+    <string name="error.empty.phone">Please fill in your phone number.</string>
+    <string name="error.empty.nid">Please fill in your id (last 4 digits)</string>
+    <string name="error.empty.bank_ac">Please fill in your id (last 4 digits)</string>
+    <string name="entry_date">Entry Date</string>
+    <string name="no_data">No data found</string>
+    <string name="password_changed">Password changed</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="error.email.format">Invalid email format</string>
+    <string name="dialog.message.reset_password">Please input your staff id.</string>
+    <string name="check_email">Please check your email.</string>
+    <string name="search_user">Search User</string>
+    <string name="empty_list">Empty List</string>
+    <string name="alert.permission">This app required following permission</string>
+    <string name="alert.title.please_select_rank">Please Select Range</string>
+    <string name="sold">Sold</string>
+    <string name="reject">Rejected</string>
+    <string name="money_unit">\"\"</string>
+    <string name="target_completed_percentage">Target Complete Rate</string>
+    <string name="error.no_next_target">No target of next month found</string>
+    <string name="data_modified">Data modified</string>
+    <string name="error.wrong_id_or_pw">Invalid user id or password, please try again.</string>
+    <string name="error.wrong_login_additonal_info">Wrong bank account, id or phone number, please try again.</string>
+    <string name="error.code">Error Code</string>
+    <string name="error.unprocessable_entity">Invalid input, please retry after data changed.</string>
+    <string name="error.invalid_current_password">Invalid Current Password</string>
+    <string name="refund_detail">Refund Detail</string>
+    <string name="sales_detail">Sales Detail</string>
+    <string name="alert.title.please_select_unit">Please selet smallest unit</string>
+    <string name="error.invalid_user">The user does not exist.</string>
+    <string name="error.expired_user">The user account is expired.</string>
+    <string name="error.invalid_password">The password is wrong.</string>
+    <string name="error.invalid_verification">The identity verification failed</string>
+    <string name="error.user_block">User is blocked, please contact admin</string>
+    <string name="other">Others</string>
+    <string name="update_fail">Update Fail.</string>
+    <string name="downloading">Downloading...</string>
+    <string name="dialog_content_app_update">New version fund, please update to the latest version.</string>
+    <string name="app_update">Update</string>
+    <string name="dialog_allow_unknown_sources">Please allow installation from unknown souces</string>
+    <string name="indicator_complete_rate">Indicator complete rate</string>
+    <string name="sales_indicator">Sales Indicator</string>
+    <string name="profit_indicator">Profile Indicator</string>
+    <string name="branches_total_indicator">Branches Sales Indicator</string>
+    <string name="breakdown_indicator">Breakdown Indicator</string>
+    <string name="uninstall_update">Please delete the current app and install it again.</string>
+    <string name="title_terms">Usage and Privacy Terms</string>
+    <string name="content_terms">
+          \u0020\u0020 在您使用智人APP的各項服務前，請您務必仔細閱讀並透徹理解
+        本協議以及公司不時發布或更新的有關智人APP使用及操作規則
+        的通知和要求。
+        \n
+          \u0020\u0020 1、智人APP所包含的全部智力成果包括但不限於數據庫、頁面
+        設計、文字和圖表、軟件、照片、錄像、音樂、聲音及其前述組
+        合，軟件編譯、相關源代碼和軟件 (包括小應用程序和腳本) 等的
+        所有權和知識產權等權利和權益均歸周大福珠寶集團有限公司（
+        以下合稱為“公司”）。
+        \n
+          \u0020\u0020 2、您從智人APP獲取的內容享有受限使用權，僅限於在日常銷
+        售及管理工作範圍內使用，使用方式僅限於在智人APP內瀏覽。
+        智人APP內的內容為絕對機密，在未取得公司書面許可之前，您
+        不得以截屏、拍照、複製、複印、改編、修改、分發、散佈、轉
+        載、引用、鏈接等其它任何方式將智人APP內的全部或部分內容
+        用於其它任何用途或向任何人披露，亦不得使用智人APP及相關
+        內容從事危害國家安全、社會公共利益和他人合法權益的活動。
+        \n
+          \u0020\u0020 3、您知悉並認可智人APP內的所有內容（包含但不限於薪酬及
+        獎金等數據）均為預計數據，僅供參考，實際以公司每月薪酬通
+        知單為準，您確認並同意不以智人APP內的任何內容向公司主張
+        任何權利或權益，或要求任何賠償或補償。在您使用智人APP期
+        間，公司有權對您的使用情況進行監督和檢查。如發現您違反本
+        協議規定或存在嚴重洩密傾向，公司將有權停止您使用智人APP
+        的相關權限，並要求您歸還數據，將再复制的該數據及其衍生品
+        全部刪除，並要求您賠償因此給公司造成的全部損失（包括但不
+        限於商譽損失、調查費、律師費等）。
+        \n
+          \u0020\u0020 您已認真閱讀本本協議中全部條款，對本協議均已知曉、理解並
+        接受，同意將其作為確定雙方權利義務的依據。
+    </string>
+    <string name="disagree">Disagree</string>
+    <string name="agree">Agree</string>
+    <string name="dialog.title.server_version">Change Server</string>
+
+
+    <string name="hk_oversea">Hong Kong and Overseas</string>
+    <string name="mainland_china">Mainland China</string>
+
+    <string-array name="server_type_arr">
+        <!--<item>@string/english</item>-->
+        <item>@string/hk_oversea</item>
+        <item>@string/mainland_china</item>
+    </string-array>
+</resources>

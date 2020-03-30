@@ -1,0 +1,383 @@
+<resources>
+    <string name="app_name">智·人</string>
+    <string name="action_settings">设定</string>
+    <string name="choose">选择</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="retry">重试</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="notification">通知</string>
+
+    //Login Page
+    <string name="user_name">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登陆</string>
+    <string name="language_c">语言:</string>
+    <string name="choose_language">选择语言</string>
+
+    //Landing Page
+    <string name="action_notification">通知</string>
+    <string name="self_management">自我管理</string>
+    <string name="direct_assessment">移动打卡</string>
+    <string name="flow_platform">流程平台</string>
+    <string name="assessment_management">考勤管理</string>
+    <string name="salary_enquiry">薪酬查询</string>
+    <string name="social_security_fund">社保公积金</string>
+    <string name="customer_service">智能客服</string>
+    <string name="performance_assessment">绩效考核</string>
+    <string name="hr_online">HR在线</string>
+    <string name="setting">设定</string>
+
+    //DashBoard
+    <string name="distributed_target">本月已分配的销售目标</string>
+    <string name="target_adjust">销售目标调整</string>
+    <string name="target_complete">目标完成</string>
+    <string name="adjusted_complete_rate">调整的目标完成率</string>
+    <string name="monthly_sales_performance">本月销售业绩</string>
+    <string name="year_on_year">同比</string>
+    <string name="A_cat">A类</string>
+    <string name="F_cat">F类</string>
+    <string name="E_cat">E类</string>
+    <string name="M_cat">M类</string>
+    <string name="total_bonus">奖金总额</string>
+    <string name="target_prize">达标奖</string>
+    <string name="commission_prize">提成奖</string>
+    <string name="profit_prize">毛利达标奖</string>
+    <string name="point_remaining">积分余额</string>
+    <string name="role_permission_not_granted">暂无数据</string>
+
+    //Target Management
+    <string name="my_target">我的目标</string>
+    <string name="team_target">团队目标</string>
+    <string name="rank">排行</string>
+    <string name="circle_distributed_target">已分配的目标完成率</string>
+    <string name="circle_adjusted_complete_rate">调整后的目标完成率</string>
+    <string name="circle_predicted_commission">预测提成奖金</string>
+    <string name="target_complete_rate">目标完成率</string>
+    <string name="sales_target">销售目标</string>
+    <string name="target_type_all">全部品类</string>
+    <string name="target_type_A">A-镶嵌类</string>
+    <string name="target_type_F">F-黄金类</string>
+    <string name="target_type_E">E-铂金/K金类</string>
+    <string name="target_type_M">M-钟表类</string>
+    <string name="breakdown_target">已分解的目标</string>
+    <string name="breakdown_target_complete_rate">已分解的目标完成率</string>
+    <string name="profit_target">毛利额目标</string>
+    <string name="profit_complete_rate">毛利达标率</string>
+    <string name="target_distributed_target">本月已分配目标</string>
+
+    //Target Detail
+    <string name="circle_detail_distributed_target">分配的销售目标</string>
+    <string name="circle_detail_adjust_target">@string/target_adjust</string>
+    <string name="circle_detail_target_complete">销售的目标完成</string>
+    <string name="circle_detail_adjuested_rate">@string/circle_adjusted_complete_rate</string>
+
+    //BreakDown
+    <string name="breakdown_title">目标分解</string>
+    <string name="branches_sales_target">分店总销售目标</string>
+    <string name="breakdown_sales_target">已分解的销售目标</string>
+    <string name="last_year_sales">去年同期销售额</string>
+    <string name="lower_limit">保底</string>
+    <string name="total_sales_target">总销售目标</string>
+    <string name="target_completed_percentage">目标完成率</string>
+
+    //Predict Bonus Activity
+    <string name="predict_formula_des">完成目标后你将获得的提成奖:</string>
+    <string name="predict_distributed_target">已分配目标</string>
+    <string name="predict_adjusted_target">调整后的目标</string>
+
+    //Performance Enquiry
+    <string name="my_performance">我的业绩</string>
+    <string name="team_performance">团队业绩</string>
+    <string name="check_sales_details"><u>查看销售业绩明细</u></string>
+
+    //Menu
+    <string name="target_management">目标管理</string>
+    <string name="performance_enquiry">业绩查询</string>
+    <string name="personal_info">个人信息</string>
+    <string name="my_team">我的团队</string>
+    <string name="sales_ranking">销售排行榜</string>
+    <string name="my_bonus">我的奖金</string>
+    <string name="sales_mark">营销积分</string>
+    <string name="hk_sales_mark">酌情奖赏</string>
+    <string name="sales_activity">销售活动</string>
+    <string name="manager_judgement">主管评分</string>
+    <string name="service_evaluation">服务评价</string>
+    <string name="back_menu">返回首页</string>
+
+
+    //Setting
+    <string name="change_password">更改密码</string>
+    <string name="language">语言</string>
+    <string name="logout">登出</string>
+    <string name="current_pw">现时密码</string>
+    <string name="new_pw">新密码</string>
+    <string name="confirm_pw">确认密码</string>
+
+    //Profile
+    <string name="change_tele">更改电话号码</string>
+    <string name="change_address">更改地址</string>
+    <string name="change_email">更改电邮地址</string>
+
+
+    //Month
+    <string-array name="month_arr">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+
+    <string-array name="quarter_arr">
+        <item>Q1</item>
+        <item>Q2</item>
+        <item>Q3</item>
+        <item>Q4</item>
+    </string-array>
+
+    //period
+    <string name="monthly">月</string>
+    <string name="quarterly">季</string>
+    <string name="yearly">年</string>
+
+    //Error Message
+    <string name="error.network">网路连接失败</string>
+    <string name="error.server">伺服器出现错误</string>
+    <string name="error.empty.staff.id">请填上您的工号</string>
+    <string name="error.empty.password">请填上您的密码</string>
+    <string name="error.empty.phone">请填上您的手机号码</string>
+    <string name="error.empty.nid">请填上您的身份证(后四位)</string>
+    <string name="error.empty.bank_ac">请填上您的银行卡号(后四位)</string>
+    <string name="error.invalid.new_password">新密码必需最少由6位字串组成</string>
+    <string name="error.invalid.confirm_password">确认密码与新密码不符</string>
+    <string name="error.email.format">电邮格式不正确</string>
+    <string name="error.no_next_target">没有下月目标</string>
+
+    //Alert Message
+    <string name="alert.logout">你是否要登出?</string>
+    <string name="alert.permission.change_profile">需要权限以更改个人头像</string>
+    <string name="alert.permission.setting">权限设定</string>
+    <string name="alert.title.please_select">请选择方式</string>
+    <string-array name="alert_choose_photo_arr">
+        <item>相簿</item>
+        <item>相机</item>
+    </string-array>
+
+    <string name="title_activity_my_bonus" translatable="false">MyBonusActivity</string>
+    <string name="title_activity_target_management" translatable="false">TargetManagementActivity</string>
+    <string name="title_activity_setting" translatable="false">SettingActivity</string>
+    <string name="title_activity_landing_page" translatable="false">LandingPageActivity</string>
+    <string name="title_activity_self_management" translatable="false">SelfManagement</string>
+    <string name="title_activity_sales_event" translatable="false">SalesEvent</string>
+    <string name="title_activity_menu" translatable="false">MenuActivity</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="title_activity_sales_point" translatable="false">SalesPointActivity</string>
+    <string name="title_activity_web_view" translatable="false">WebViewActivity</string>
+    <string name="title_activity_sales_ranking" translatable="false">SalesRankingActivity</string>
+    <string name="title_activity_performance_detail" translatable="false">PerformanceDetailActivity</string>
+    <string name="title_activity_predict_commission" translatable="false">PredictCommissionActivity</string>
+    <string name="title_activity_target_detail" translatable="false">TargetDetailActivity</string>
+    <string name="title_activity_edit_profile" translatable="false">EditProfileActivity</string>
+    <string name="title_activity_notification" translatable="false">NotificationActivity</string>
+    <string name="title_activity_push_notification" translatable="false">PushNotificationActivity</string>
+    <string name="title_activity_push_notification_details" translatable="false">PushNotificationDetailsActivity</string>
+    <string name="title_activity_break_down" translatable="false">BreakDownActivity</string>
+    <string name="title_activity_edit_break_down" translatable="false">EditBreakDownActivity</string>
+    <string name="title_activity_type_ain_other" translatable="false">TypeAInOtherActivity</string>
+    <string name="title_activity_my_team" translatable="false">MyTeamActivity</string>
+    <string name="title_activity_performance_enquiry" translatable="false">PerformanceEnquiryActivity</string>
+    <string name="title_activity_ranking_detail" translatable="false">RankingDetailActivity</string>
+    <string name="title_activity_verification" translatable="false">VerificationActivity</string>
+    <string name="english" translatable="false">English</string>
+    <string name="trad_chinese" translatable="false">繁體中文</string>
+    <string name="sim_chinese" translatable="false">简体中文</string>
+    <string-array name="language_arr" translatable="false">
+        <!--<item>@string/english</item>-->
+        <item>@string/sim_chinese</item>
+        <item>@string/trad_chinese</item>
+    </string-array>
+    <string name="banner" translatable="false">banner</string>
+    <string name="title_activity_splash" translatable="false">SplashActivity</string>
+    <string name="title_activity_reset_password" translatable="false">ResetPasswordActivity</string>
+
+    <!-- My Team -->
+    <string name="employee_rate">员工得分</string>
+    <string name="department">部门</string>
+    <string name="cs_performance">客户服务</string>
+    <string name="communication_technique">沟通技巧</string>
+    <string name="user_id">工号</string>
+    <string name="team_colaboration">团队协作</string>
+    <string name="total_sales_amount">总销售额</string>
+    <string name="sales_last_year">销售同比</string>
+    <string name="sales_deatil">销售业绩明细</string>
+    <string name="all">全部</string>
+    <string name="profit_amount">毛利额</string>
+    <string name="compare_growth">同比增长</string>
+    <string name="point_detail">积分明细</string>
+    <string name="small_count">小计</string>
+    <string name="push_notification">推送</string>
+    <string name="sales_performance">业绩表现</string>
+    <string name="ability_capability_point">能力胜任素质得分</string>
+    <string name="co_act_point">企业文化行为得分</string>
+    <string name="district">区域</string>
+    <string name="a_type">镶嵌类</string>
+    <string name="f_type">黄金类</string>
+    <string name="e_type">铂金/K金类</string>
+    <string name="m_type">钟表类</string>
+    <string name="input_rate_msg">请输入评分:</string>
+    <string name="type_sales_amount">品类销售额</string>
+    <string name="ranking_area">排名范围</string>
+    <string name="branches">分店</string>
+    <string name="small_district">小区</string>
+    <string name="district_2">区</string>
+    <string name="large_district">大区</string>
+    <string name="staff">员工</string>
+    <string name="rank_smallest_unit">排名最少单位</string>
+    <string name="sales_amount">销售额</string>
+    <string name="breakdown_target_complete">分配的目标完成</string>
+    <string name="adjusted_target_complete">调整后的目标完成</string>
+    <string name="phone">电话号码</string>
+    <string name="address">地址</string>
+    <string name="email">电邮</string>
+    <string name="dialog.title.change_address">更改地址</string>
+    <string name="dialog.title.change_email">更改电邮</string>
+    <string name="dialog.title.change_phone">更改电话</string>
+    <string name="dialog.message.change_address">请输入新地址</string>
+    <string name="dialog.message.change_email">请输入新电邮</string>
+    <string name="dialog.message.change_phone">请输入新电话</string>
+    <string name="sales_target_this_month">本月的销售目标</string>
+    <string name="forgot_password"><u>忘记密码</u></string>
+    <string name="department_name">部门名称</string>
+    <string name="adjust_target">调整目标</string>
+    <string name="break_down_target_this_month">本月已分解的销售目标</string>
+    <string name="sales_record">销售记录</string>
+    <string name="activity_summary">活动概览</string>
+    <string name="refund_noti">退货通知</string>
+    <string name="nid_input_hint">身份证(后四位)</string>
+    <string name="birth_input_hint">出生月日(MMDD)</string>
+    <string name="tele_input_hint">手机号码</string>
+
+    <string name="entry_date">入职日期</string>
+    <string name="no_data">没有资料</string>
+    <string name="password_changed">密码已更改</string>
+    <string name="reset_password">重设密码</string>
+    <string name="dialog.message.reset_password">请输入您的工号</string>
+    <string name="check_email">请检查您的电邮</string>
+    <string name="search_user">搜索员工</string>
+    <string name="empty_list">没有资料</string>
+    <string name="alert.permission">"此应用程式需要以下权限 "</string>
+    <string name="alert.title.please_select_rank">请选择排名范围</string>
+    <string name="sold">售出</string>
+    <string name="reject">退货</string>
+    <string name="money_unit">元</string>
+    <string name="last_year">去年同期</string>
+    <string name="data_modified">资料已更改</string>
+    <string name="error.wrong_login_additonal_info">银行卡号、身份证号码、手机不匹配，请重新输入</string>
+    <string name="error.code">錯誤代碼</string>
+    <string name="error.unprocessable_entity">请求数据出错，请更改数据后重试</string>
+    <string name="error.invalid_current_password">现时密码输入错误，请重新输入</string>
+    <string name="refund_detail">退货明细</string>
+    <string name="sales_detail">销售明细</string>
+    <string name="alert.title.please_select_unit">请选择排名最少单位</string>
+    <string name="error.invalid_user">工号不存在，请检查后重试</string>
+    <string name="error.expired_user">工号已过期</string>
+    <string name="error.invalid_password">密码错误，请检查后重试</string>
+    <string name="error.invalid_verification">验证信息错误，请检查后重试</string>
+    <string name="error.user_block">帐号已被封锁，请联络管理员</string>
+    <string name="error.wrong_id_or_pw">用户ID不存在(或)密码错误，请重新输入</string>
+    <string name="error.db_busy">系统繁忙，请稍后5秒重试</string>
+    <string name="other">其他</string>
+    <string name="update_fail">更新失败</string>
+    <string name="app_update">更新</string>
+    <string name="dialog_content_app_update">发现新版本 请更新至最新版本</string>
+    <string name="downloading">下载中...</string>
+    <string name="dialog_allow_unknown_sources">请允许安装未知来源的应用程式</string>
+    <string name="indicator_complete_rate">目标完成率</string>
+    <string name="sales_indicator">销售目标</string>
+    <string name="profit_indicator">毛利额目标</string>
+    <string name="branches_total_indicator">分店总销售目标</string>
+    <string name="breakdown_indicator">已分解的目标</string>
+    <string name="uninstall_update">请先移除此应用程式 再重新安装</string>
+    <string name="title_activity_terms" translatable="false">TermsActivity</string>
+    <string name="title_terms">使用及保密协议</string>
+    <string name="content_terms">
+          \u0020\u0020 在您使用智人APP的各项服务前，请您务必仔细阅读并透彻理解
+        本协议以及公司不时发布或更新的有关智人APP使用及操作规则
+        的通知和要求。
+        \n
+          \u0020\u0020 1、智人APP所包含的全部智力成果包括但不限于数据库、页面
+        设计、文字和图表、软件、照片、录像、音乐、声音及其前述组
+        合，软件编译、相关源代码和软件 (包括小应用程序和脚本) 等的
+        所有权和知识产权等权利和权益均归周大福珠宝集团有限公司（
+        以下合称为“公司”）。
+        \n
+          \u0020\u0020 2、您从智人APP获取的内容享有受限使用权，仅限于在日常销
+        售及管理工作范围内使用，使用方式仅限于在智人APP内浏览。
+        智人APP内的内容为绝对机密，在未取得公司书面许可之前，您
+        不得以截屏、拍照、复制、复印、改编、修改、分发、散布、转
+        载、引用、链接等其它任何方式将智人APP内的全部或部分内容
+        用于其它任何用途或向任何人披露，亦不得使用智人APP及相关
+        内容从事危害国家安全、社会公共利益和他人合法权益的活动。
+        \n
+          \u0020\u0020 3、您知悉并认可智人APP内的所有内容（包含但不限于薪酬及
+        奖金等数据）均为预计数据，仅供参考，实际以公司每月薪酬通
+        知单为准，您确认并同意不以智人APP内的任何内容向公司主张
+        任何权利或权益，或要求任何赔偿或补偿。在您使用智人APP期
+        间，公司有权对您的使用情况进行监督和检查。如发现您违反本
+        协议规定或存在严重泄密倾向，公司将有权停止您使用智人APP
+        的相关权限，并要求您归还数据，将再复制的该数据及其衍生品
+        全部删除，并要求您赔偿因此给公司造成的全部损失（包括但不
+        限于商誉损失、调查费、律师费等）。
+        \n
+          \u0020\u0020 您已认真阅读本本协议中全部条款，对本协议均已知晓、理解并
+        接受，同意将其作为确定双方权利义务的依据。</string>
+    <string name="agree">同意</string>
+    <string name="disagree">不同意</string>
+    <string name="dialog.title.server_version">更改伺服器</string>
+
+    <string name="hk_oversea">香港及海外</string>
+    <string name="mainland_china">中国大陆</string>
+
+
+    <!--phase 2-->
+    <!--select layer activity-->
+    <string name="select_layer_label">请选择查看的範围</string>
+
+    <!--sales point-->
+    <string name="sales_point_detail">积分明细</string>
+    <string name="hk_sales_point_detail">酌情奖赏明细</string>
+
+    <string name="smart_talent_info_note">智人APP内的所有内容(包含但不限于薪酬及奖金等数据)均为预计数据, 仅供参考, 实际以公司每月薪酬通知单为准</string>
+
+    <string name="summary">总汇</string>
+    <string name="your_viewable">你可查看的范围</string>
+
+
+    <string name="error.no_current_target">没有今月目标</string>
+    <string name="error.target_edit_expired">已超过可调整期限</string>
+
+
+    <string name="integrate">综合</string>
+
+    <string name="submit">提交</string>
+    <string name="confirm_target">确认</string>
+    <string name="target_confirmed">成功确认目标</string>
+
+    <string name="sure_confirm_target">是否确认目标？</string>
+
+    <string-array name="server_type_arr">
+        <!--<item>@string/english</item>-->
+        <item>@string/hk_oversea</item>
+        <item>@string/mainland_china</item>
+    </string-array>
+
+</resources>

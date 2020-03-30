@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bullb.ctf.Setting.LanguageFragment">
+
+    <LinearLayout
+        android:id="@+id/change_pw_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/sim_chin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                android:text="@string/sim_chinese"
+                android:gravity="center_vertical"
+                android:background="@color/white_transparent_80"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/trad_chin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="?attr/selectableItemBackground">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                android:text="@string/trad_chinese"
+                android:gravity="center_vertical"
+                android:background="@color/white_transparent_80"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

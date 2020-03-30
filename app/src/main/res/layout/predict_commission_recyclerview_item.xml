@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/white_transparent_80"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/type_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:text="@string/predict_adjusted_target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_toRightOf="@+id/type_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/type_text"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/text_mid_grey"
+            android:gravity="right"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/last_year_text"
+            android:layout_alignLeft="@+id/type_text"
+            android:layout_alignStart="@+id/type_text"
+            android:layout_marginTop="4dp"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/target_text"
+            android:layout_toRightOf="@+id/last_year_text"
+            android:layout_alignBottom="@+id/last_year_text"
+            android:gravity="right"
+            android:textSize="20sp"
+            android:paddingRight="10dp"
+            android:inputType="number"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:background="@drawable/target_edittext_bg"
+            android:translationZ="5dp"/>
+
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_below="@+id/target_text"
+            android:minHeight="10dp"
+            android:maxHeight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:max="100"
+            android:splitTrack="false"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

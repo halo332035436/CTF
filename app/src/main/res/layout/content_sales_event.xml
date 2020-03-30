@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/big_pink_bg"/>
+
+    <!--<ScrollView-->
+        <!--android:id="@+id/scrollView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:layout_marginBottom="@dimen/bottom_view_height"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/text_mid_grey"
+                >
+
+                <ProgressBar
+                    android:id="@+id/banner_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/banner_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible"/>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/banner_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"/>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/circle_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignBottom="@id/banner_view_pager"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/target_edittext_bg"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:iconifiedByDefault="false"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    style="@style/AppTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/transparent"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabTextAppearance="@style/AppTabTextAppearance">
+
+                </android.support.design.widget.TabLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    <!--</ScrollView>-->
+
+    <!--<com.bullb.ctf.Widget.BottomView-->
+        <!--android:id="@+id/bottom_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/bottom_view_height"-->
+        <!--android:layout_gravity="bottom"/>-->
+
+</FrameLayout>

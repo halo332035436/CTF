@@ -1,0 +1,196 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bullb.ctf.SelfManagement.SalesPerformanceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/circle_width"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/circle_layout"
+                    android:layout_width="@dimen/circle_width"
+                    android:layout_height="@dimen/circle_width"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true">
+
+                    <com.bullb.ctf.Widget.CircleView
+                        android:id="@+id/circle_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/circle_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CircleDescriptionTextStyle"
+                        android:text="同比"/>
+
+                    <TextView
+                        android:id="@+id/year_on_year_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CircleDataTextStyle"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="bottom|center_horizontal"
+                        android:layout_weight="1">
+
+
+                        <com.bullb.ctf.Widget.BarView
+                            android:id="@+id/bar_a"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="bottom|center_horizontal"
+                        android:layout_weight="1">
+
+
+                        <com.bullb.ctf.Widget.BarView
+                            android:id="@+id/bar_f"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/bar_height"/>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="bottom|center_horizontal"
+                        android:layout_weight="1">
+
+
+
+                        <com.bullb.ctf.Widget.BarView
+                            android:id="@+id/bar_e"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/bar_height" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bar_m_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="bottom|center_horizontal"
+                        android:layout_weight="1">
+
+
+                        <com.bullb.ctf.Widget.BarView
+                            android:id="@+id/bar_m"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/pink" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/text_dark_grey"
+                        android:text="@string/A_cat"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/text_dark_grey"
+                        android:text="@string/F_cat"
+                        android:id="@+id/textView"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/text_dark_grey"
+                        android:text="@string/E_cat"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_m"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/text_dark_grey"
+                        android:text="@string/M_cat"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

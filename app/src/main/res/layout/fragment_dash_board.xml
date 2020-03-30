@@ -1,0 +1,105 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bullb.ctf.SelfManagement.DashBoardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/circle_width"
+                android:layout_height="@dimen/circle_width"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                >
+
+
+                <com.bullb.ctf.Widget.CircleView
+                    android:id="@+id/circle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/target_complete_textview"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CircleDataTextStyle"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:maxLines="1"/>
+
+
+                    <TextView
+                        android:id="@+id/rate_text"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CircleDescriptionTextStyle"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/adjusted_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/complete_rate_textview"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CircleDataTextStyle"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:maxLines="1"/>
+
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CircleDescriptionTextStyle"
+                        android:gravity="center"
+                        android:text="@string/adjusted_complete_rate"
+                        android:textSize="14sp"
+                        android:maxLines="1"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
