@@ -24,6 +24,7 @@ import com.bullb.ctf.Utils.ImageCache;
 import com.bullb.ctf.Utils.KeyTools;
 import com.bullb.ctf.Utils.SharedPreference;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.daimajia.swipe.SwipeLayout;
 
 import java.util.HashMap;
@@ -74,7 +75,10 @@ public class MyTeamRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView
         if (holder instanceof ItemViewHolder) {
             final ItemViewHolder viewHolder = (ItemViewHolder) holder;
 
-            Glide.with(mContext).load(scores[i].user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(viewHolder.imageView);
+            Glide.with(mContext)
+                    .load(scores[i].user.getIconUrl())
+                    .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                    .into(viewHolder.imageView);
 //
 //            byte[] image = imageCache.getBitmapFromMemCache(scores[i].user_id);
 //            if (image!= null) {

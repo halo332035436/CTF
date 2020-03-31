@@ -35,6 +35,7 @@ import com.bullb.ctf.Utils.SharedPreference;
 import com.bullb.ctf.Utils.SharedUtils;
 import com.bullb.ctf.Widget.BlurCircleView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 import com.nineoldandroids.view.ViewHelper;
 
@@ -268,7 +269,10 @@ public class TargetRecyclerViewAdapter_B extends RecyclerView.Adapter<RecyclerVi
                 UserTargetData userTargetData = new UserTargetData(user.user_targets, fromDate);
                 SalesData salesData = new SalesData(user.user_sales, fromDate);
 
-                Glide.with(mContext).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(viewHolder.image);
+                Glide.with(mContext)
+                        .load(user.getIconUrl())
+                        .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                        .into(viewHolder.image);
 
                 viewHolder.rateText.setText(mContext.getString(R.string.indicator_complete_rate) + " " + SharedUtils.addCommaToNum(salesData.getSalesCompletionRate(),"%"));
                 viewHolder.userNameText.setText(user.name);

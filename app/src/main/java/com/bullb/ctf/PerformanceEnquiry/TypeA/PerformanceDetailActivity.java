@@ -19,6 +19,7 @@ import com.bullb.ctf.Utils.WidgetUtils;
 import com.bullb.ctf.Widget.BottomView;
 import com.bullb.ctf.Widget.MenuView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 import com.joooonho.SelectableRoundedImageView;
 
@@ -95,7 +96,10 @@ public class PerformanceDetailActivity extends AppCompatActivity {
 
     private void setInfoBanner(){
         //set profile pic
-        Glide.with(this).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+        Glide.with(this)
+                .load(user.getIconUrl())
+                .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                .into(profileImage);
 
         userNameText.setText(user.name);
         userPositionText.setText(user.title);

@@ -44,6 +44,7 @@ import com.bullb.ctf.Utils.WidgetUtils;
 import com.bullb.ctf.Widget.BottomView;
 import com.bullb.ctf.Widget.MenuView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.joooonho.SelectableRoundedImageView;
@@ -134,7 +135,10 @@ public class SelfManagementActivity extends AppCompatActivity {
 //        byte[] image = imageCache.getBitmapFromMemCache(user.id);
 //        if (image!= null) {
         Log.d("icon_path", SharedUtils.getIconPath(this, user.id));
-        Glide.with(SelfManagementActivity.this).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+        Glide.with(SelfManagementActivity.this)
+                .load(user.getIconUrl())
+                .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                .into(profileImage);
 //        }
 //        else{
 //            getProfileImage();

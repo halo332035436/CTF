@@ -34,6 +34,7 @@ import com.bullb.ctf.Utils.WidgetUtils;
 import com.bullb.ctf.Widget.BottomView;
 import com.bullb.ctf.Widget.MenuView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -109,7 +110,10 @@ public class EditBreakDownActivity extends AppCompatActivity implements View.OnC
         }
 
 //      set profile pic
-        Glide.with(this).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(imageView);
+        Glide.with(this)
+                .load(user.getIconUrl())
+                .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                .into(imageView);
 
         userTargetData = new UserTargetData(user.user_targets, getStartDate(Calendar.getInstance()));
 

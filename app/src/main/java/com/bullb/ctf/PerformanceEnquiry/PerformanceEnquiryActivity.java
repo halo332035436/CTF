@@ -35,6 +35,7 @@ import com.bullb.ctf.Widget.CalendarView;
 import com.bullb.ctf.Widget.MenuView;
 import com.bullb.ctf.Widget.TabEntity;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -257,7 +258,10 @@ public class PerformanceEnquiryActivity extends AppCompatActivity  implements Vi
             teamInfoLayout.setVisibility(View.GONE);
 
             //set profile pic
-            Glide.with(this).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+            Glide.with(this)
+                    .load(user.getIconUrl())
+                    .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                    .into(profileImage);
 
             userNameText.setText(user.name);
             userPositionText.setText(user.title);

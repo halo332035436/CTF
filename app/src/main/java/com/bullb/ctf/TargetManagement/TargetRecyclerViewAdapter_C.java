@@ -223,7 +223,9 @@ public class TargetRecyclerViewAdapter_C extends RecyclerView.Adapter<RecyclerVi
                 DepartmentTargetData departmentTargetData = new DepartmentTargetData(department.department_targets,null, fromDate);
                 DepartmentSalesData departmentSalesData = new DepartmentSalesData(department.departmentSales, fromDate);
 
-                Glide.with(mContext).load(R.drawable.logo).dontAnimate().into(viewHolder.image);
+                Glide.with(mContext)
+                        .load(R.drawable.logo)
+                        .into(viewHolder.image);
                 viewHolder.rateText.setText(mContext.getString(R.string.indicator_complete_rate) + " " + SharedUtils.addCommaToNum(departmentSalesData.getSalesCompleteRate(),"%"));
                 viewHolder.progressBar.setProgress((int)SharedUtils.formatDouble(departmentSalesData.getSalesCompleteRate()));
                 viewHolder.locationText.setText(department.long_description);

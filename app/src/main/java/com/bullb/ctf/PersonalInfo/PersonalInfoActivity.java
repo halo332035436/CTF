@@ -41,6 +41,7 @@ import com.bullb.ctf.Utils.SharedPreference;
 import com.bullb.ctf.Utils.SharedUtils;
 import com.bullb.ctf.Utils.WidgetUtils;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 import com.joooonho.SelectableRoundedImageView;
 import com.karumi.dexter.Dexter;
@@ -149,7 +150,10 @@ public class PersonalInfoActivity extends AppCompatActivity implements View.OnCl
         }
         setToolbar();
 
-        Glide.with(this).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+        Glide.with(this)
+                .load(user.getIconUrl())
+                .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                .into(profileImage);
 
         userNameText.setText(user.name);
         userPositionText.setText(user.title);
@@ -182,7 +186,10 @@ public class PersonalInfoActivity extends AppCompatActivity implements View.OnCl
         supervisorPositionText.setText(supervisor.title);
         supervisorDepartmentText.setText(getString(R.string.department_name) + ": " + supervisor.getLongDepartmentName());
 
-        Glide.with(this).load(supervisor.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(supervisorProfileImage);
+        Glide.with(this)
+                .load(supervisor.getIconUrl())
+                .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                .into(supervisorProfileImage);
     }
 
     private void getSupervisor(){
@@ -360,7 +367,10 @@ public class PersonalInfoActivity extends AppCompatActivity implements View.OnCl
                     String data = keyTools.decryptData(response.body().iv,response.body().data);
                     User user = new Gson().fromJson(data, User.class);
                     SharedPreference.setUser(user, PersonalInfoActivity.this);
-                    Glide.with(PersonalInfoActivity.this).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+                    Glide.with(PersonalInfoActivity.this)
+                            .load(user.getIconUrl())
+                            .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                            .into(profileImage);
                 } else{
                     SharedUtils.networkErrorDialogWithRetryUncancellable(PersonalInfoActivity.this, retry);
                 }

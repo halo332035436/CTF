@@ -31,6 +31,7 @@ import com.bullb.ctf.Widget.BottomView;
 import com.bullb.ctf.Widget.CalendarView;
 import com.bullb.ctf.Widget.MenuView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 import com.wang.avi.AVLoadingIndicatorView;
 
@@ -137,7 +138,12 @@ public class ManagerRateActivity extends AppCompatActivity implements CalendarVi
         }
 
         // display icon
-        Glide.with(this).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+        Glide.with(this)
+                .load(user.getIconUrl())
+//                .placeholder(R.drawable.user_placeholder)
+//                .dontAnimate()
+                .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                .into(profileImage);
 
 //        byte[] image = imageCache.getBitmapFromMemCache(user.id);
 //        if (image!= null)

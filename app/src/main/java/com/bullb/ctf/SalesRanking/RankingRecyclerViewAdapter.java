@@ -21,6 +21,7 @@ import com.bullb.ctf.ServerPreference;
 import com.bullb.ctf.Utils.SharedPreference;
 import com.bullb.ctf.Utils.SharedUtils;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.HashMap;
 
@@ -136,9 +137,15 @@ public class RankingRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         if(SharedUtils.appIsHongKong()&&SharedPreference.getUser(mContext).type.equals(User.USER_TYPE_A)
                 &&!(leaderboardList[position].id.equals(SharedPreference.getUser(mContext).id))
                 ){
-            Glide.with(mContext).load(R.drawable.user_placeholder).placeholder(R.drawable.user_placeholder).dontAnimate().into(imageView);
+            Glide.with(mContext)
+                    .load(R.drawable.user_placeholder)
+                    .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                    .into(imageView);
         }else {
-            Glide.with(mContext).load(leaderboardList[position].icon_url).placeholder(R.drawable.user_placeholder).dontAnimate().into(imageView);
+            Glide.with(mContext)
+                    .load(leaderboardList[position].icon_url)
+                    .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                    .into(imageView);
         }
     }
 
@@ -156,7 +163,9 @@ public class RankingRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
      * @param i
      */
     private void setupShopList(ViewHolder viewHolder, int i) {
-        Glide.with(mContext).load(R.drawable.logo).dontAnimate().into(viewHolder.image);
+        Glide.with(mContext)
+                .load(R.drawable.logo)
+                .into(viewHolder.image);
         viewHolder.titleText.setVisibility(View.VISIBLE);
         viewHolder.userNameText.setVisibility(View.GONE);
         viewHolder.userPositionText.setVisibility(View.GONE);

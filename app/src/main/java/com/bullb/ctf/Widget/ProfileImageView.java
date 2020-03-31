@@ -12,6 +12,7 @@ import com.bullb.ctf.BuildConfig;
 import com.bullb.ctf.R;
 import com.bullb.ctf.Utils.SharedUtils;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.joooonho.SelectableRoundedImageView;
 import com.nineoldandroids.view.ViewPropertyAnimator;
 
@@ -45,19 +46,28 @@ public class ProfileImageView extends RelativeLayout implements View.OnClickList
     }
 
     public void setImage(byte[] bytes){
-        Glide.with(getContext()).load(bytes).dontAnimate().into(roundedImageView);
+        Glide.with(getContext())
+                .load(bytes)
+                .into(roundedImageView);
     }
 
     public void setImage(byte[] bytes, int placeHolder){
-        Glide.with(getContext()).load(bytes).placeholder(placeHolder).dontAnimate().into(roundedImageView);
+        Glide.with(getContext())
+                .load(bytes)
+                .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                .into(roundedImageView);
     }
 
     public void setImage(String path){
-        Glide.with(getContext()).load(path).dontAnimate().into(roundedImageView);
+        Glide.with(getContext())
+                .load(path)
+                .into(roundedImageView);
     }
 
     public void setImage(int path){
-        Glide.with(getContext()).load(path).dontAnimate().into(roundedImageView);
+        Glide.with(getContext())
+                .load(path)
+                .into(roundedImageView);
     }
 
     public void setMargins(int left, int top, int right, int bottom){

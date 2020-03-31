@@ -40,6 +40,7 @@ import com.bullb.ctf.Utils.SharedPreference;
 import com.bullb.ctf.Utils.SharedUtils;
 import com.bullb.ctf.Widget.CircleView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.daimajia.swipe.SwipeLayout;
 import com.google.gson.Gson;
 import com.nineoldandroids.view.ViewHelper;
@@ -129,7 +130,10 @@ public class BreakDownViewAdapter extends RecyclerView.Adapter<RecyclerView.View
             //load User Image
             if(SharedUtils.serverIsHongKong(mContext)) {
                 viewHolder.progressBar.setProgressDrawable(ContextCompat.getDrawable(mContext, R.drawable.bar_gradient));
-                Glide.with(mContext).load(user.getIconUrl()).placeholder(R.drawable.user_placeholder).dontAnimate().into(viewHolder.imageView);
+                Glide.with(mContext)
+                        .load(user.getIconUrl())
+                        .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                        .into(viewHolder.imageView);
                 viewHolder.limitText.setText(mContext.getString(R.string.lower_limit) + " " + SharedUtils.addCommaToNum(userTargetData.getBaseAll()));
                 viewHolder.progressBar.setProgress((int)SharedUtils.formatDouble(userTargetData.getBaseOverDistributedRatio()));
 

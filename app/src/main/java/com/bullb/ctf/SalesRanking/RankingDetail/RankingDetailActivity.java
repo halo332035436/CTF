@@ -27,6 +27,7 @@ import com.bullb.ctf.Widget.BottomView;
 import com.bullb.ctf.Widget.CalendarView;
 import com.bullb.ctf.Widget.MenuView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 import com.joooonho.SelectableRoundedImageView;
 import com.wang.avi.AVLoadingIndicatorView;
@@ -123,9 +124,15 @@ public class RankingDetailActivity extends AppCompatActivity implements Calendar
 
     private void getProfileIcon() {
         if (SharedUtils.appIsHongKong()&& SharedPreference.getUser(RankingDetailActivity.this).type.equals(User.USER_TYPE_A)){
-            Glide.with(this).load(R.drawable.user_placeholder).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+            Glide.with(this)
+                    .load(R.drawable.user_placeholder)
+                    .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                    .into(profileImage);
         }else {
-            Glide.with(this).load(userID).placeholder(R.drawable.user_placeholder).dontAnimate().into(profileImage);
+            Glide.with(this)
+                    .load(userID)
+                    .apply(new RequestOptions().placeholder(R.drawable.user_placeholder))
+                    .into(profileImage);
         }
     }
 

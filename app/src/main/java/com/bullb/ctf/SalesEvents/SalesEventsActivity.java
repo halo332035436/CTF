@@ -92,7 +92,9 @@ public class SalesEventsActivity extends AppCompatActivity {
         //getBanner
         byte[] bannerImageByte = imageCache.getBitmapFromMemCache("banner");
         if (bannerImageByte!= null) {
-            Glide.with(SalesEventsActivity.this).load(bannerImageByte).dontAnimate().into(bannerImage);
+            Glide.with(SalesEventsActivity.this)
+                    .load(bannerImageByte)
+                    .into(bannerImage);
         }
         else{
             getBanner();
