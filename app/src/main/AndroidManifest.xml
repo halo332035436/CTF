@@ -77,7 +77,7 @@
         <activity
             android:name=".Login.SplashActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -89,126 +89,126 @@
         <activity
             android:name=".Login.LoginActivity"
             android:label="@string/title_activity_landing_page"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <activity
             android:name=".LandingPageActivity"
             android:label="@string/title_activity_landing_page"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SelfManagement.SelfManagementActivity"
             android:label="@string/title_activity_self_management"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SalesEvents.SalesEventsActivity"
             android:label="@string/title_activity_sales_event"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red" />
         <activity
             android:name=".PersonalInfo.PersonalInfoActivity"
             android:label="@string/title_activity_main"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red" />
         <activity
             android:name=".MyBonus.MyBonusActivity"
             android:label="@string/title_activity_my_bonus"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TargetManagement.TargetManagementActivity"
             android:label="@string/title_activity_target_management"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red"></activity>
         <activity
             android:name=".Setting.SettingActivity"
             android:label="@string/title_activity_setting"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
             android:name=".TargetManagement.Predict.PredictCommissionActivity"
             android:label="@string/title_activity_predict_commission"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
             android:name=".TargetManagement.TypeATargetDetailActivity"
             android:label="@string/title_activity_target_detail"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PersonalInfo.EditProfileActivity"
             android:label="@string/title_activity_edit_profile"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".Notification.NotificationActivity"
             android:label="@string/title_activity_notification"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red"
             android:parentActivityName=".LandingPageActivity"/>
         <activity
             android:name=".Notification.PushNotificationActivity"
             android:label="@string/title_activity_push_notification"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red"
             android:parentActivityName=".Notification.NotificationActivity"/>
         <activity
             android:name=".TargetManagement.BreakDown.BreakDownActivity"
             android:label="@string/title_activity_break_down"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TargetManagement.BreakDown.EditBreakDownActivity"
             android:label="@string/title_activity_edit_break_down"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red" />
         <activity
             android:name=".TargetManagement.TypeAInOtherActivity"
             android:label="@string/title_activity_type_ain_other"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MyTeam.MyTeamActivity"
             android:label="@string/my_team"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ManagerRating.ManagerRateActivity"
             android:label="@string/manager_judgement"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
             android:name=".PerformanceEnquiry.PerformanceEnquiryActivity"
             android:label="@string/title_activity_performance_enquiry"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PerformanceEnquiry.TypeA.PerformanceDetailActivity"
             android:label="@string/title_activity_performance_detail"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red" />
         <activity
             android:name=".SalesPoint.SalesPointActivity"
             android:label="@string/title_activity_sales_point"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SalesRanking.SalesRankingActivity"
             android:label="@string/title_activity_sales_ranking"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar.Red.Transparent" />
         <activity
             android:name=".WebView.WebViewActivity"
             android:label="@string/title_activity_web_view"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SalesRanking.RankingDetail.RankingDetailActivity"
@@ -217,39 +217,39 @@
         <activity
             android:name=".Login.VerificationActivity"
             android:label="@string/title_activity_verification"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <!--phase 2-->
         <activity
             android:name=".TargetManagement.TargetManagementSelectActivity"
             android:label="@string/select_layer_label"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PerformanceEnquiry.PerformanceEnquirySelectActivity"
             android:label="@string/select_layer_label"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SalesRanking.SalesRankingSelectActivity"
             android:label="@string/select_layer_label"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SelfManagement.SelfManagementSelectActivity"
             android:label="@string/select_layer_label"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".CheckinWebView.CheckInActivity"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".PerformanceAssess.PerformAssessmentActivity"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ServiceEvaluation.ServiceEvaluationActivity"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".WebView.CBCWebViewActivity"
-            android:screenOrientation="portrait"
+            
             android:theme="@style/AppTheme.NoActionBar"/>
 
 

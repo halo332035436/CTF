@@ -6,13 +6,13 @@ import android.util.Log;
 
 import com.bullb.ctf.Utils.KeyTools;
 import com.bullb.ctf.Utils.LanguageUtils;
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.karumi.dexter.Dexter;
 import com.liulishuo.filedownloader.FileDownloader;
 
 import cn.jpush.android.api.BasicPushNotificationBuilder;
 import cn.jpush.android.api.JPushInterface;
-import io.fabric.sdk.android.Fabric;
+//import io.fabric.sdk.android.Fabric;
 
 
 public class MainApplication extends Application {
@@ -26,7 +26,7 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Fabric.with(this, new Crashlytics());
+//        Fabric.with(this, new Crashlytics());
         Dexter.initialize(this);
         LanguageUtils.setDefaultLanguage(this);
         FileDownloader.init(this);

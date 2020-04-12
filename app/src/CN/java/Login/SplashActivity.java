@@ -34,7 +34,7 @@ import com.bullb.ctf.Utils.KeyTools;
 import com.bullb.ctf.Utils.LanguageUtils;
 import com.bullb.ctf.Utils.SharedPreference;
 import com.bullb.ctf.Utils.SharedUtils;
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -75,10 +75,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        if (SharedPreference.getUser(this) != null) {
-            Crashlytics.setUserIdentifier(SharedPreference.getUser(this).id);
-        }
-        Crashlytics.setString("manufacturer",Build.MANUFACTURER);
+//        if (SharedPreference.getUser(this) != null) {
+//            Crashlytics.setUserIdentifier(SharedPreference.getUser(this).id);
+//        }
+//        Crashlytics.setString("manufacturer",Build.MANUFACTURER);
 
         apiService = ServiceGenerator.createService(ApiService.class, this);
 

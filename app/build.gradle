@@ -1,15 +1,4 @@
-//buildscript {
-//    repositories {
-//        maven { url 'https://maven.fabric.io/public' }
-//        jcenter() { url "https://maven.aliyun.com/repository/jcenter" }
-//        maven { url "https://maven.aliyun.com/repository/google" }
-//        mavenCentral()
-//    }
-//
-//    dependencies {
-//        classpath 'io.fabric.tools:gradle:1.23.0'
-//    }
-//}
+
 apply plugin: 'com.android.application'
 //apply plugin: 'io.fabric'
 
@@ -95,7 +84,8 @@ android {
             versionName = android.defaultConfig.versionName + " production"
 //            buildConfigField "String", "SERVER_URL", '"http://smart-talent-api.ctf.com.cn/"'
 //            buildConfigField "String", "SERVER_URL", '"http://ctf-api-02.cloud01.iclass.hk/"'
-            buildConfigField "String", "SERVER_URL", '"http://47.107.50.2/"'
+//            buildConfigField "String", "SERVER_URL", '"http://47.107.50.2/"'
+            buildConfigField "String", "SERVER_URL", '"http://59.37.36.180:6080/smart-talent-api/"'
             buildConfigField "String", "DOWNLOAD_URL", '"http://app.ctfmall.com/smarttalent/default.html"'
             buildConfigField "String", "PUSH_NOTIFICATION_API_KEY", '"cnWVyWIXZhRsUERQbBEVi1fI"'
             buildConfigField "String", "GAIA_CHECK_URL", '"https://h5.gaiaworkforce.com/"'
@@ -152,9 +142,9 @@ android {
         }
         CNStaging {
             applicationIdSuffix = ".stage"
-            versionName = android
-                    .defaultConfig.versionName + " cnstaging"
-            buildConfigField "String", "SERVER_URL", '"http://smart-talent-api-test.ctf.com.cn/"'
+            versionName = android.defaultConfig.versionName + " cnstaging"
+            buildConfigField "String", "SERVER_URL", '"http://59.37.36.180:6080/smart-talent-api/"'
+//            buildConfigField "String", "SERVER_URL", '"http://smart-talent-api-test.ctf.com.cn/"'
 //            buildConfigField "String", "SERVER_URL", '"http://smart-talent-api.ctf.com.cn/"'
 //            buildConfigField "String", "SERVER_URL", '"http://ctf-api-02.cloud01.iclass.hk/"'
             buildConfigField "String", "DOWNLOAD_URL", '"http://app.ctfmall.com/smarttalent/default.html"'
@@ -212,7 +202,6 @@ android {
 }
 
 repositories {
-//    maven { url 'https://maven.fabric.io/public' }
     flatDir {
         dirs 'libs'
     }
@@ -220,9 +209,9 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
-        transitive = true
-    }
+//    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+//        transitive = true
+//    }
 
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.nineoldandroids:library:2.4.0'
